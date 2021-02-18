@@ -1,5 +1,8 @@
+// imports
+import java.util.Scanner;
+import java.util.Calendar;
 /**
- * Hello World Program
+ * Program that determines a users age
  * @author Alex-Simko 
  */
 public class Main {
@@ -10,8 +13,37 @@ public class Main {
    */
 
   public static void main(String[] args) {
-    // TODO code application logic here
-    System.out.println("Hello World!");
+    // Creating a Scanner used to take user input
+    Scanner input = new Scanner(System.in);
+
+    // declaring variables
+    String usersName;
+
+    // Uses  Java Calendar package to get the year, futures proofs program past 2021
+    final int CURRENT_YEAR = Calendar.getInstance().get(Calendar.YEAR);
+    
+    // Ask users their name
+    System.out.println("Please enter your name:");
+
+    // Runs scanner to catch next input
+    usersName = input.nextLine();
+
+    // Prints out text for user to interact
+    System.out.println("Hello " + usersName);
+
+    System.out.println("Please enter the year you were born in:");
+
+    // gets birth year
+    int userBithYear = input.nextInt();
+
+    // calculates user age
+    int usersAge = CURRENT_YEAR - userBithYear;
+
+    // Final print 
+    System.out.println("Hey " + usersName + ", I bet you are " + usersAge + " years old.");
+
+    // Fixes resource leak, and closes scanner
+    input.close();
   }
 
 }
