@@ -16,10 +16,11 @@ public class Main {
     // Creating a Scanner used to take user input
     Scanner input = new Scanner(System.in);
 
-    // declaring variables
+    // intilizing name variable
     String usersName;
 
     // Uses  Java Calendar package to get the year, futures proofs program past 2021
+    // Declaring year variable
     final int CURRENT_YEAR = Calendar.getInstance().get(Calendar.YEAR);
     
     // Ask users their name
